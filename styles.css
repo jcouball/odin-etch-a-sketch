@@ -1,0 +1,28 @@
+body {
+  /* The font-family stack */
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Set a default font weight */
+  font-weight: 400;
+
+  /* Optional: Improve font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div#grid {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+div#grid .row {
+  display: flex;
+  gap: 0.5rem;
+  height: 100px;
+}
+
+div#grid .cell {
+  border: black solid 1px;
+  width: 100px;
+}
