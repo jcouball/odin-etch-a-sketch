@@ -26,6 +26,7 @@ div#grid {
   gap: 0rem;
   flex-direction: column;
   border: black solid 1px;
+  max-width: var(--grid-width);
 }
 
 div#grid .row {
