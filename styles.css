@@ -1,3 +1,14 @@
+/*
+  const root = document.documentElement;
+  root.style.setProperty('--grid-width', '600px');
+  root.style.setProperty('--cells-wide', '4');
+ */
+
+:root {
+  --grid-width: 600px;
+  --cells-wide: 4;
+}
+
 body {
   /* The font-family stack */
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -12,17 +23,17 @@ body {
 
 div#grid {
   display: flex;
-  gap: 0.5rem;
+  gap: 0rem;
   flex-direction: column;
 }
 
 div#grid .row {
   display: flex;
-  gap: 0.5rem;
-  height: 100px;
+  gap: 0rem;
 }
 
 div#grid .cell {
   border: black solid 1px;
-  width: 100px;
+  min-width: calc(var(--grid-width) / var(--cells-wide));
+  min-height: calc(var(--grid-width) / var(--cells-wide));
 }
