@@ -1,11 +1,11 @@
-let cellsWide = 100;
+let cellsWide = 16;
 
 function highlightCell(e) {
   e.target.style.backgroundColor = "black";
 }
 
 function reset() {
-  let userInput = parseInt(prompt("How many cells wide should the grid be?", "16"));
+  let userInput = parseInt(prompt("How many cells wide should the grid be?", cellsWide));
   if (userInput < 1 || userInput > 100) {
     alert("You must enter a number between 1 and 100");
   }

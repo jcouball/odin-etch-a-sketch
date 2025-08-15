@@ -6,7 +6,7 @@
 
 :root {
   --grid-width: 600px;
-  --cells-wide: 4;
+  --cells-wide: 16;
 }
 
 body {
@@ -25,6 +25,7 @@ div#grid {
   display: flex;
   gap: 0rem;
   flex-direction: column;
+  border: black solid 1px;
 }
 
 div#grid .row {
@@ -33,7 +34,6 @@ div#grid .row {
 }
 
 div#grid .cell {
-  border: black solid 1px;
   min-width: calc(var(--grid-width) / var(--cells-wide));
   min-height: calc(var(--grid-width) / var(--cells-wide));
 }
