@@ -9,7 +9,28 @@
   <script src="etch-a-sketch.js" defer></script>
 </head>
 <body>
+  <h1>Etch-a-Sketch</h1>
   <div id="grid"></div>
+
+  <fieldset>
+    <legend>Pen Type</legend>
+
+    <div>
+      <input type="radio" id="penTypeBlack" name="penType" value="black" checked>
+      <label for="penTypeBlack">Black</label>
+    </div>
+
+    <div>
+      <input type="radio" id="penTypeRandomColor" name="penType" value="random">
+      <label for="penTypeRandomColor">Random Color</label>
+    </div>
+
+    <div>
+      <input type="radio" id="penTypeOpacity" name="penType" value="opacity">
+      <label for="penTypeOpacity">Darken Opacity</label>
+    </div>
+  </fieldset>
+
   <button id="reset">Reset</button>
 </body>
 </html>

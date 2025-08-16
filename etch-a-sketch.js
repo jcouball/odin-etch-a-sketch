@@ -1,7 +1,7 @@
 let cellsWide = 16;
 
 // Could be "black", "random", or "opacity"
-let highlightStrategy = "random";
+let penType = "black";
 
 function randomHexDigit() {
   const characters = '0123456789abcdef';
@@ -39,7 +39,6 @@ function highlightWithRandomColor(cell, color, opacity) {
     cell.setAttribute("data-current-color", color);
     cell.setAttribute("data-current-opacity", opacity);
     let updatedColor = rgbaColor(color, opacity);
-    console.log(updatedColor);
     cell.style.backgroundColor = updatedColor;
   }
 }
@@ -49,7 +48,7 @@ function highlightCell(e) {
   let color = cell.getAttribute('data-current-color');
   let opacity = Number(cell.getAttribute('data-current-opacity'));
 
-  switch (highlightStrategy) {
+  switch (penType) {
     case "black":
       highlightBlack(cell, color, opacity);
       break;
@@ -109,6 +108,13 @@ function resetGrid() {
 }
 
 resetGrid();
+
+const penTypeRadios = document.querySelectorAll('input[name="penType"]');
+penTypeRadios.forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    penType = this.value;
+  });
+});
 
 resetButton = document.querySelector("#reset");
 resetButton.addEventListener('click', reset);

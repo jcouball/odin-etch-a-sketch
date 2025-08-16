@@ -21,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+fieldset {
+  max-width: var(--grid-width);
+}
+
 div#grid {
   display: flex;
   gap: 0rem;
